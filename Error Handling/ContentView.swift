@@ -101,7 +101,7 @@ struct ContentView: View {
     func safeVend() {
         print("Safe Vending")
         do {
-            try? vend()
+            try vend()
         }
         catch VendingMachineError.insufficientFunds(moneyNeeded: let moneyNeeded) {
             outputString = "Insufficient Funds. You need another $\(String(format: "%.2f", moneyNeeded)) to complete the transaction."
